@@ -1,0 +1,47 @@
+/* font do titulo */
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-55');
+
+.tituloPesquisa {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 32px;
+}
+
+.titulo {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24.42px;
+    font-family: 'Helvetica Neue';
+}
+
+.inputPesquisa {
+    padding: 14.5px 19.51px 14.5px 16px;
+    background-color: white;
+    width: 287px;
+    height: 48px;
+    border: 1px solid #DFDFDF;
+    border-radius: 8px;
+    color: black;
+}
+
+.inputPesquisa::placeholder {
+    color: #9E9E9E;
+}
+
+.pesquisa-container {
+    position: relative;
+}
+
+.pesquisa-icon {
+    position: absolute;
+    right: 10px;
+    background-color: white;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9E9E9E;
+    cursor: default;
+}

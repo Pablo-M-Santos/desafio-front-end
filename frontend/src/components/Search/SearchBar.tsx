@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./SearchBar.css";
 
 type SearchBarProps = {
   onSearch: (query: string) => void;
@@ -13,12 +14,16 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
   };
 
   return (
-    <input
-      type="text"
-      placeholder="Pesquisar por nome, cargo ou telefone..."
-      value={query}
-      onChange={handleSearch}
-    />
+    <div className="pesquisa-container">
+      <input
+        className="inputPesquisa"
+        type="text"
+        placeholder="Pesquisar"
+        value={query}
+        onChange={handleSearch}
+      />
+      <span className="material-icons pesquisa-icon">search</span>{" "}
+    </div>
   );
 };
 

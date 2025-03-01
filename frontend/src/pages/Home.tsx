@@ -1,10 +1,10 @@
 import React from "react";
-import Table from "../components/Table";
-
+import Table from "../components/Table/Table";
+import Navbar from "../components/Navbar/Navbar";
 const Home: React.FC = () => {
   return (
     <div>
-      <h1>Lista de Funcionários</h1>
+      <Navbar />
       <Table />
     </div>
   );
