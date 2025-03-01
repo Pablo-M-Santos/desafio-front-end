@@ -32,14 +32,14 @@ const Table: React.FC = () => {
         <h1 className="titulo">Funcionários</h1>
         <SearchBar onSearch={handleSearch} />
       </div>
-      <table border={1} className="table-container">
+      <table className="table-container">
         <thead>
           <tr>
-            <th>Imagem</th>
-            <th>Nome</th>
-            <th>Cargo</th>
-            <th>Data de Admissão</th>
-            <th>Telefone</th>
+            <th>FOTO</th>
+            <th>NOME</th>
+            <th>CARGO</th>
+            <th>DATA DE ADMISSÂO</th>
+            <th>TELEFONE</th>
           </tr>
         </thead>
         <tbody>

@@ -1,5 +1,47 @@
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-55');
+
 .table-container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    border-spacing: 0;
+    border: 1px solid #DFDFDF;
+    color: black;
+    font-family: 'Helvetica Neue';
+    font-weight: normal;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background-color: white;
+}
+
+td {
+    background-color: white;
+}
+
+
+th {
+    background-color: #0500FF;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19.54px;
+    font-weight: 500;
+    padding: 14px 32px;
+    color: white;
+
+}
+
+th:first-child {
+    border-top-left-radius: 8px;
+}
+
+th:last-child {
+    border-top-right-radius: 8px;
+}
+
+.table-container td {
+    border-bottom: 1px solid #DFDFDF;
+}
+
+.table-container td:nth-child(1) {
+    text-align: center;
 }
