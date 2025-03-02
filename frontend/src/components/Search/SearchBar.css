@@ -9,13 +9,13 @@
     max-width: 1200px;
     margin: 0 auto;
     margin-bottom: 32px;
+    font-family: 'Helvetica Neue';
 }
 
 .titulo {
     font-size: 20px;
     font-weight: 500;
     line-height: 24.42px;
-    font-family: 'Helvetica Neue';
 }
 
 .inputPesquisa {
@@ -30,6 +30,9 @@
 
 .inputPesquisa::placeholder {
     color: #9E9E9E;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.09px;
 }
 
 .pesquisa-container {
