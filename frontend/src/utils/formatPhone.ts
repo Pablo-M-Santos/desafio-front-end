@@ -1,20 +1,21 @@
 export function formatPhone(phone: string): string {
+  const cleaned = phone.replace(/\D/g, "");
 
-    const cleaned = phone.replace(/\D/g, "");
-  
-
-    if (cleaned.length > 11) {
-      
-      phone = cleaned.slice(-11); 
-    }
-  
-    
-    if (phone.length === 11) {
-      return phone.replace(/(\d{2})(\d{5})(\d{4})/, "($1) $2-$3");
-    } else if (phone.length === 10) {
-      return phone.replace(/(\d{2})(\d{4})(\d{4})/, "($1) $2-$3");
-    }
-  
-    return phone; 
+  if (!cleaned.startsWith("55")) {
+    return phone;
   }
-  
+
+  const phoneWithoutCountry = cleaned.slice(2);
+
+
+  if (phoneWithoutCountry.length === 11) {
+    return `+55 (${phoneWithoutCountry.slice(0, 2)}) ${phoneWithoutCountry.slice(2, 7)}-${phoneWithoutCountry.slice(7)}`;
+  }
+
+
+  else if (phoneWithoutCountry.length === 10) {
+    return `+55 (${phoneWithoutCountry.slice(0, 2)}) ${phoneWithoutCountry.slice(2, 6)}-${phoneWithoutCountry.slice(6)}`;
+  }
+
+  return phone;
+}
