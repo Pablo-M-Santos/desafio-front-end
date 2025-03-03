@@ -10,12 +10,26 @@ const Table: React.FC = () => {
   const [users, setUsers] = useState<User[]>([]);
   const [filteredUsers, setFilteredUsers] = useState<User[]>([]);
   const [dropdownState, setDropdownState] = useState<number | null>(null);
+  const [isSmallScreen, setIsSmallScreen] = useState<boolean>(
+    window.innerWidth <= 375
+  );
 
   useEffect(() => {
     fetchUsers().then((data) => {
       setUsers(data);
       setFilteredUsers(data);
     });
+
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 375);
+
+      if (window.innerWidth > 610) {
+        setDropdownState(null);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const handleSearch = (query: string) => {
@@ -68,6 +82,12 @@ const Table: React.FC = () => {
                 <tr className="dropdown-row">
                   <td colSpan={6} className="dropdown-content">
                     <div className="dropdown-detail">
+                      {isSmallScreen && (
+                        <div className="dropdown-detail-item">
+                          <h2>Cargo</h2>
+                          <span>{user.job}</span>
+                        </div>
+                      )}
                       <div className="dropdown-detail-item">
                         <h2>Data de admissão</h2>
                         <span>

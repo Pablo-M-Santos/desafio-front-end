@@ -78,6 +78,7 @@ th:last-child {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    background-color: white;
 }
 
 .table-container tr.selected-row td {
@@ -89,6 +90,7 @@ th:last-child {
     display: flex;
     justify-content: space-between;
     border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+    background-color: white;
 }
 
 .dropdown-detail-item h2 {
@@ -96,6 +98,7 @@ th:last-child {
     font-size: 16px;
     line-height: 19.54px;
     color: #1C1C1C;
+    background-color: white;
 }
 
 .dropdown-detail-item span {
@@ -103,6 +106,8 @@ th:last-child {
     font-size: 16px;
     line-height: 19.09px;
     color: #1C1C1C;
+    background-color: white;
+
 }
 
 
@@ -189,6 +194,15 @@ th:last-child {
         padding: 8px 10px;
     }
 
+}
 
+@media (max-width: 320px) {
+    .dropdown-detail-item h2 {
+        font-size: 14px;
+    }
+
+    .dropdown-detail-item span {
+        font-size: 14px;
+    }
 
 }
