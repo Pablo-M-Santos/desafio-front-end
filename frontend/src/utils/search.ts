@@ -17,7 +17,7 @@ const normalizePhone = (phone: string) => {
 };
 
 export const searchUsers = (query: string, users: User[]): User[] => {
-    const lowerQuery = query.replace(/[^0-9]/g, "");
+    const lowerQuery = query.toLowerCase();
 
     return users.filter((user) => {
         const formattedPhone = normalizePhone(formatPhone(user.phone));
