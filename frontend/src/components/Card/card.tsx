@@ -2,7 +2,7 @@ import "./Card.css";
 
 interface CardProps {
   title: string;
-  value: number;
+  value: string;
 }
 
 const Card: React.FC<CardProps> = ({ title, value }) => {
