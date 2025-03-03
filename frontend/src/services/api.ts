@@ -1,6 +1,7 @@
 import { User } from "../types/User";
 
 export async function fetchUsers(): Promise<User[]> {
-  const response = await fetch("http://localhost:3001/employees");
+  const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:3001/employees";
+  const response = await fetch(apiUrl);
   return response.json();
 }
