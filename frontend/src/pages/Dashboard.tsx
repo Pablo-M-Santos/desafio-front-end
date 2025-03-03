@@ -1,11 +1,11 @@
 import React from "react";
-import Table from "../components/Table/Table";
 import Navbar from "../components/Navbar/Navbar";
+import Employee from "../components/Dashboard/Employee";
 const Home: React.FC = () => {
   return (
-    <div style={{ backgroundColor: "#F0F0F0", height: "100vh" }}>
+    <div>
       <Navbar />
-      <Table />
+      <Employee />
     </div>
   );
 };
