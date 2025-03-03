@@ -53,7 +53,7 @@ Certifique-se de ter o Node.js instalado em sua máquina.
 https://docs.google.com/document/d/1ekqpLa_wAUKgKYH5_nzhFxJr-evG1oujslZ0Y2HlBT0/edit?usp=sharing
 
 ## 📜 Melhorias
- - O projeto já foi desenvolvido e no momento vou adicionar algumas funcionalidades e informações 
+O projeto já foi desenvolvido e no momento vou adicionar algumas funcionalidades e informações 
 - [ ] Desenvolvimento da tela de dashboard que vai mostrar informações com quantidade de funcionarios, quantidade por cargo, funcionarios mais experientes e mais novos, quantidade de cargos.
 - [ ] Desenvolvimento das funcionalidades de cadastrar, editar e excluir um funcionario.
 - [ ] Sistema de autentificação e niveis de acesso.
