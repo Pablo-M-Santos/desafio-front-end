@@ -2,7 +2,7 @@
 
 Este projeto foi realizado como parte do desafio técnico da BeTalent. O Teste Técnico para Front-End consiste em construir a visualização de uma tabela com dados que virão de uma API simulada, em json-server.
 
-![Foto do projeto](./frontend/src/frontend/src/assets/foto-do-projeoto.png)
+![Foto do projeto](./frontend/src/assets/foto-do-projeto.png)
 
 
 
