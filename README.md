@@ -49,6 +49,13 @@ Certifique-se de ter o Node.js instalado em sua máquina.
 - Visibilidade dos Dados: A aplicação exibe uma lista de dados, incluindo informações como nome, cargo, data de admissão e telefone, garantindo uma visualização clara e organizada.
 - Pesquisa: A interface permite realizar pesquisas filtrando os dados por nome, cargo, data de admissão e telefone.
 
-
 ## Documentação da Aplicação
 https://docs.google.com/document/d/1ekqpLa_wAUKgKYH5_nzhFxJr-evG1oujslZ0Y2HlBT0/edit?usp=sharing
+
+## 📜 Melhorias
+ - O projeto já foi desenvolvido e no momento vou adicionar algumas funcionalidades e informações 
+- [ ] Desenvolvimento da tela de dashboard que vai mostrar informações com quantidade de funcionarios, quantidade por cargo, funcionarios mais experientes e mais novos, quantidade de cargos.
+- [ ] Desenvolvimento das funcionalidades de cadastrar, editar e excluir um funcionario.
+- [ ] Sistema de autentificação e niveis de acesso.
+- [ ] Vou utilizar Node.js para me aprofundar mais sobre a ferramentea.
+   
