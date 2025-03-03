@@ -1,3 +1,4 @@
+// Model de User
 export type User = {
   id: number;
   name: string;

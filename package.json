@@ -2,7 +2,8 @@
     "name": "json-server",
     "version": "1.0.0",
     "scripts": {
-      "start": "node server.js"
+      "start": "node server.js",
+      "json-server": "json-server --watch db.json --port 3001"
     },
     "dependencies": {
       "json-server": "^0.17.3"

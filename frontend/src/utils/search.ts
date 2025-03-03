@@ -1,19 +1,18 @@
 import { User } from "../types/User";
 import { formatPhone } from "./formatPhone";
 
-// Função para normalizar o texto (remover acentuação)
+
 const normalizeText = (text: string) => {
     return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 };
 
-// Função para formatar e limpar os dados da data (remover barras)
 const normalizeDate = (date: string) => {
-    return date.replace(/\//g, "").toLowerCase(); // Remover barras da data
+    return date.replace(/\//g, "").toLowerCase(); 
 };
 
 
 const normalizePhone = (phone: string) => {
-    return phone.replace(/[^0-9]/g, ""); // Remove qualquer coisa que não seja número
+    return phone.replace(/[^0-9]/g, ""); 
 };
 
 export const searchUsers = (query: string, users: User[]): User[] => {

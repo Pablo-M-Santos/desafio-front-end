@@ -1,66 +1,54 @@
-# Teste Técnico Front-end BeTalent
+# Desafio Frontend - BeTalent
 
-Este é um repositório para Testes Técnicos em Front-end da Be. Ele é destinado a pessoas que participam de nossos processos seletivos. 
+Este projeto foi realizado como parte do desafio técnico da BeTalent. O Teste Técnico para Front-End consiste em construir a visualização de uma tabela com dados que virão de uma API simulada, em json-server.
 
-Se você chegou até aqui por meio de um formulário de Teste Técnico, siga em frente. Caso contrário, acompanhe a BeTalent no [Linkedin](https://www.linkedin.com/company/betalenttech), [Instagram](https://www.instagram.com/betalent.tech/), [Facebook](https://web.facebook.com/bemobile.tech) ou na nossa newsletter [BeTalent Academy]([https://t.me/be_tech_community](https://beacademy.substack.com/)). Divulgamos novos processos seletivos por lá.
+![Foto do projeto](./frontend/src/frontend/src/assets/foto-do-projeoto.png)
 
-## Desafio
 
-O Teste Técnico para Front-End da BeTalent consiste em construir a visualização de uma tabela com dados que virão de uma API simulada, em json-server.
 
-### Mockup
+## ⚙ Tecnologias utilizadas
+Para o desenvolvimento do projeto essas são as tecnologias:
+ - React.js
+ - TypeScript
+ - Json Server
+ - Vite
 
-Este é o [projeto em Figma](https://www.figma.com/file/yw6th52zE9bubewc6ayTg5/Teste-T%C3%A9cnico-Front-End-Be.?type=design&node-id=1%3A4&mode=dev&t=vVxs9eyKybrYmq4Z-1) para você se orientar. Nele, você encontrará estilos, visualização desktop e mobile e outros padrões que deverá seguir.
+## 🛠️ Como Rodar o Projeto
 
-### Requisitos Gerais
+1. Clonar o Repositório
+```bash
+  git clone https://github.com/Pablo-M-Santos/desafio-front-end.git
+  cd desafio-front-end
+```
 
-Deve-se utilizar React.js ou Vanilla JS (JavaScript puro) para construir o projeto.
+2. Instalar as Dependências
+Certifique-se de ter o Node.js instalado em sua máquina.
+```bash
+  npm install
+```
 
-É permitido utilizar libs externas, mas recomenda-se que seja o mínimo possível.
+3. entre na pasta frontend
+```bash
+  cd .\frontend\ 
+```
 
-A visualização deve ser responsiva.
+4. Rodar o Frontend Localmente
+```bash
+  npm run dev
+```
+ > O frontend estará disponível em http://localhost:5173/
 
-A tabela deve conter as seguintes colunas:
 
-- imagem (thumb do/a usuário/a);
-- nome;
-- cargo
-- data de admissão;
-- telefone.
+5. Rodar o Json Server Localmente
+```bash
+  npm run json-server
+```
+> O servidor estará disponível em http://localhost:3001/
 
-Também deve ser possível realizar pesquisa na tabela por meio de um input. O input de pesquisa deve permitir filtrar dados por cargo, nome e telefone.
+## 📈 Funcionalidades
+- Visibilidade dos Dados: A aplicação exibe uma lista de dados, incluindo informações como nome, cargo, data de admissão e telefone, garantindo uma visualização clara e organizada.
+- Pesquisa: A interface permite realizar pesquisas filtrando os dados por nome, cargo, data de admissão e telefone.
 
-Datas e telefones devem ser formatadas no front-end e não na API.
 
-Tenha instaladas em sua máquina as ferramentas [Git](https://git-scm.com/), [Node.js](https://nodejs.org/en/) e [Yarn](https://yarnpkg.com/) (ou outro gerenciador de pacotes de sua preferência) para poder trabalhar no projeto.
-
-### Acesso aos dados da API simulada
-
-Para ter acesso aos dados que alimentarão o projeto, faça o seguinte:
-
-1. caso você não tenha, instale o pacote [json-server](https://github.com/typicode/json-server);
-2. clone este repositório do GitHub em sua máquina: [https://github.com/BeMobile/desafio-front-end](https://github.com/BeMobile/desafio-front-end);
-3. entre na pasta do projeto, em sua máquina, e, por meio da linha de comando, execute o comando `json-server --watch db.json`, para consumir a API simulada;
-4. inicie a estrutura e o desenvolvimento do projeto.
-
-É necessário deixar o json-server rodando no terminal para que os dados sejam visualizados no projeto.
-
-Caso você tenha problemas com o json-server, tente rodá-lo com `npx json-server db.json` ou 
-com `yarn json-server <path>/db.json`, em que `<path>` é o caminho completo até o diretório em que o arquivo db.json está localizado. Se mesmo assim não funcionar, busque ajuda na web.
-
-### Critérios de Avaliação
-
-Em ordem de relevância, avaliaremos:
-
-1. lógica de programação;
-2. organização (do código e dos arquivos);
-3. CSS do projeto;
-4. README, que deve conter, pelo menos, as seguintes informações: sobre o projeto, pré-requisitos e instruções para rodar a aplicação.
-
-É um diferencial na avaliação o uso de TypeScript.
-
-### Envio da Solução
-
-O projeto deverá ser hospedado em um repositório no seu GitHub. O link do repositório deverá ser fornecido por meio do formulário de Teste Técnico encaminhado ao seu e-mail. Não serão aceitos links de projetos enviados por outros meios.
-
-Demais instruções e regras serão instruídas nos formulários e nas comunicações do processo seletivo do qual você está participando.
+## Documentação da Aplicação
+https://docs.google.com/document/d/1ekqpLa_wAUKgKYH5_nzhFxJr-evG1oujslZ0Y2HlBT0/edit?usp=sharing
