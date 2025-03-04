@@ -1,0 +1,70 @@
+job:
+Desenvolvimento:
+    Desenvolvedor Front-end
+    Desenvolvedor Back-end
+    Desenvolvedor Full-stack
+    Engenheiro de Software
+    Desenvolvedor Mobile
+
+Qualidade e Testes:
+    QA (Quality Assurance)
+    Analista de Testes
+    Testador Automatizado
+
+Gestão de Projetos:
+    Gerente de Projetos
+    Scrum Master
+    Product Owner
+
+Infraestrutura e Suporte:
+    DevOps Engineer
+    Administrador de Sistemas
+    Analista de Suporte Técnico
+
+Dados e Inteligência Artificial:
+    Cientista de Dados
+    Engenheiro de Machine Learning
+    Analista de BI (Business Intelligence)
+
+department:
+Departamentos Possíveis:
+    TI (Tecnologia da Informação)
+    Desenvolvimento de Software
+    Qualidade e Testes
+    Gestão de Projetos
+    Infraestrutura e Suporte
+    Dados e Inteligência Artificial
+
+level:
+    Júnior
+    Pleno
+    Sênior
+
+status:
+    Ativo
+    Inativo
+    Afastado
+    Em Período de Experiência
+
+sihft:
+    Manhã
+    Tarde
+    Noite
+    Integral
+
+Usuároi Base:
+    {
+      "id": 1,
+      "name": "João",
+      "job": "Back-end",
+      "department": "TI",
+      "level": "Pleno",
+      "status": "Ativo",
+      "salary_range": "R$5.000 - R$7.000",
+      "admission_date": "2019-12-02T00:00:00.000Z",
+      "email": "roberto@email.com",
+      "phone": "5551234567890",
+      "address": "São Paulo, SP",
+      "shift": "Manhã",
+      "image": "https://img.favpng.com/25/7/23/computer-icons-user-profile-avatar-image-png-favpng-LFqDyLRhe3PBXM0sx2LufsGFU.jpg"
+    }
