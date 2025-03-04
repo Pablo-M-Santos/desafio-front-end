@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { fetchUsers } from "../../services/api";
 import SearchBar from "../Search/SearchBar";
-import { User } from "../../types/User";
+import { Employee } from "../../types/User";
 import { formatPhone } from "../../utils/formatPhone";
 import { searchUsers } from "../../utils/search";
 import "./Table.css";
 
 const Table: React.FC = () => {
-  const [users, setUsers] = useState<User[]>([]);
-  const [filteredUsers, setFilteredUsers] = useState<User[]>([]);
+  const [users, setUsers] = useState<Employee[]>([]);
+  const [filteredUsers, setFilteredUsers] = useState<Employee[]>([]);
   const [dropdownState, setDropdownState] = useState<number | null>(null);
   const [isSmallScreen, setIsSmallScreen] = useState<boolean>(
     window.innerWidth <= 375
