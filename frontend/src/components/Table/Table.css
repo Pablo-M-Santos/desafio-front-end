@@ -12,6 +12,11 @@
     border-top-right-radius: 8px;
 }
 
+.table-container {
+    overflow: hidden;
+}
+
+
 td {
     background-color: rgb(255, 255, 255);
 }
