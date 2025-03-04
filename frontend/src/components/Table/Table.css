@@ -26,15 +26,14 @@ th {
     font-weight: 500;
     font-size: 16px;
     line-height: 19.54px;
-    padding: 14px 32px;
+    padding: 10px;
     color: white;
     text-align: left;
-
 }
 
 td {
     background-color: rgb(255, 255, 255);
-    padding: 8px 33px 7px 32px;
+    padding: 10px;
     text-align: left;
     font-weight: 400;
     font-size: 16px;

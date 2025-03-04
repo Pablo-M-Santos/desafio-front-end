@@ -53,8 +53,15 @@ const Table: React.FC = () => {
             <th>FOTO</th>
             <th>NOME</th>
             <th>CARGO</th>
-            <th>DATA DE ADMISSÃO</th>
+            <th>DEPARTAMENTO</th>
+            <th>NÍVEL</th>
+            <th>STATUS</th>
+            {/* <th>FAIXA SALARIAL</th> */}
             <th>TELEFONE</th>
+            <th>DATA DE ADMISSÃO</th>
+            {/* <th>EMAIL</th> */}
+            {/* <th>ENDEREÇO</th> */}
+            {/* <th>TURNO</th> */}
             <th className="action-column">•</th>
           </tr>
         </thead>
@@ -67,8 +74,15 @@ const Table: React.FC = () => {
                 </td>
                 <td>{user.name}</td>
                 <td>{user.job}</td>
-                <td>{new Date(user.admission_date).toLocaleDateString()}</td>
+                <td>{user.department}</td>
+                <td>{user.level}</td>
+                <td>{user.status}</td>
+                {/* <td>{user.salary_range}</td> */}
                 <td>{formatPhone(user.phone)}</td>
+                <td>{new Date(user.admission_date).toLocaleDateString()}</td>
+                {/* <td>{user.email}</td> */}
+                {/* <td>{user.address}</td> */}
+                {/* <td>{user.shift}</td> */}
                 <td className="action-column">
                   <span
                     className="material-icons"
