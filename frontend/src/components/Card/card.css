@@ -1,7 +1,9 @@
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-55');
+
 .card {
   width: 300px;
   height: 200px;
-  background-color: gray;
+  background-color: white;
   color: white;
   display: flex;
   flex-direction: column;
@@ -9,6 +11,7 @@
   justify-content: space-between;
   border-radius: 10px;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  border: 1px solid #DFDFDF;
   font-family: Arial, sans-serif;
   text-align: center;
 }
@@ -16,10 +19,13 @@
 .card h2 {
   margin-top: 10px;
   font-size: 18px;
+  padding: 0 10px;
+  color: black;
 }
 
 .card p {
   font-size: 28px;
   font-weight: bold;
   margin: auto 0;
+  color: black;
 }

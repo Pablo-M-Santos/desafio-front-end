@@ -37,7 +37,6 @@ export const useEmployees = () => {
     }, {} as Record<number, Record<number, number>>);
 
     const employeesByYear = Object.keys(employeesByMonth).reduce((acc, year) => {
-        // Garantir que 'year' seja um número antes de acessar
         const yearNumber = Number(year);
         if (employeesByMonth[yearNumber]) {
             acc[yearNumber] = Object.values(employeesByMonth[yearNumber]).reduce((sum, count) => sum + count, 0);
@@ -57,6 +56,23 @@ export const useEmployees = () => {
         return sum + monthsInYear;
     }, 0);
 
+    // Funcionario mais experiente (admitido primeiro)
+    const mostExperienced = employees.reduce((acc, employee) => {
+        const admissionDate = new Date(employee.admission_date);
+        if (!acc || admissionDate < new Date(acc.admission_date)) {
+            return employee;
+        }
+        return acc;
+    }, null as User | null);
+
+    const mostRecent = employees.reduce((acc, employee) => {
+        const admissionDate = new Date(employee.admission_date);
+        if (!acc || admissionDate > new Date(acc.admission_date)) {
+            return employee;
+        }
+        return acc;
+    }, null as User | null);
+
     const averageEmployeesPerMonth = Math.floor(employees.length / totalMonths);
 
 
@@ -72,5 +88,7 @@ export const useEmployees = () => {
         employeesByYear,
         averageEmployeesPerYear,
         averageEmployeesPerMonth,
+        mostExperienced,
+        mostRecent
     };
 };

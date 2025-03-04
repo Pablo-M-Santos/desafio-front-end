@@ -5,4 +5,16 @@
     justify-content: center;
     font-weight: 500;
     font-family: 'Helvetica Neue';
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.grafico {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
 }

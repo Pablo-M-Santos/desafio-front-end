@@ -8,11 +8,13 @@ function Employee() {
     distinctJobs,
     averageEmployeesPerYear,
     averageEmployeesPerMonth,
+    mostExperienced,
+    mostRecent, 
   } = useEmployees();
   return (
-    <div>
+    <div className="container">
       <h1 className="titulo">Visão Geral dos Funcionários</h1>
-      <div style={{ display: "flex", gap: "20px", padding: "20px" }}>
+      <div className="grafico">
         <Card title="Total Funcionários" value={totalEmployees.toString()} />
         <Card title="Cargos Diferentes" value={distinctJobs.toString()} />
         <Card
@@ -22,6 +24,14 @@ function Employee() {
         <Card
           title="Média de Novos Funcionários por Mês"
           value={averageEmployeesPerMonth.toString()}
+        />
+        <Card
+          title="Funcionário mais Experiente"
+          value={mostExperienced ? mostExperienced.name : "N/A"}
+        />
+        <Card
+          title="Funcionário mais Novo"
+          value={mostRecent ? mostRecent.name : "N/A"}
         />
       </div>
     </div>
