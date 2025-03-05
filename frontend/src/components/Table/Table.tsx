@@ -10,8 +10,11 @@ const Table: React.FC = () => {
   const [users, setUsers] = useState<Employee[]>([]);
   const [filteredUsers, setFilteredUsers] = useState<Employee[]>([]);
   const [dropdownState, setDropdownState] = useState<number | null>(null);
-  const [isSmallScreen, setIsSmallScreen] = useState<boolean>(
-    window.innerWidth <= 375
+  const [turnoScreen, setturnoScreen] = useState<boolean>(
+    window.innerWidth <= 1880
+  );
+  const [enderecoScreen, setenderecoScreen] = useState<boolean>(
+    window.innerWidth <= 1800
   );
 
   useEffect(() => {
@@ -21,9 +24,10 @@ const Table: React.FC = () => {
     });
 
     const handleResize = () => {
-      setIsSmallScreen(window.innerWidth <= 375);
+      setturnoScreen(window.innerWidth <= 1880);
+      setenderecoScreen(window.innerWidth <= 1800);
 
-      if (window.innerWidth > 610) {
+      if (window.innerWidth > 1880) {
         setDropdownState(null);
       }
     };
@@ -56,12 +60,12 @@ const Table: React.FC = () => {
             <th>DEPARTAMENTO</th>
             <th>NÍVEL</th>
             <th>STATUS</th>
-            {/* <th>FAIXA SALARIAL</th> */}
+            <th>SALÁRIO</th>
             <th>TELEFONE</th>
             <th>DATA DE ADMISSÃO</th>
-            {/* <th>EMAIL</th> */}
-            {/* <th>ENDEREÇO</th> */}
-            {/* <th>TURNO</th> */}
+            <th>EMAIL</th>
+            <th>ENDEREÇO</th>
+            <th>TURNO</th>
             <th className="action-column">•</th>
           </tr>
         </thead>
@@ -77,12 +81,12 @@ const Table: React.FC = () => {
                 <td>{user.department}</td>
                 <td>{user.level}</td>
                 <td>{user.status}</td>
-                {/* <td>{user.salary_range}</td> */}
+                <td>{user.salary}</td>
                 <td>{formatPhone(user.phone)}</td>
                 <td>{new Date(user.admission_date).toLocaleDateString()}</td>
-                {/* <td>{user.email}</td> */}
-                {/* <td>{user.address}</td> */}
-                {/* <td>{user.shift}</td> */}
+                <td>{user.email}</td>
+                <td>{user.address}</td>
+                <td>{user.shift}</td>
                 <td className="action-column">
                   <span
                     className="material-icons"
@@ -94,24 +98,20 @@ const Table: React.FC = () => {
               </tr>
               {dropdownState === index && (
                 <tr className="dropdown-row">
-                  <td colSpan={6} className="dropdown-content">
+                  <td colSpan={12} className="dropdown-content">
                     <div className="dropdown-detail">
-                      {isSmallScreen && (
+                      {turnoScreen && (
                         <div className="dropdown-detail-item">
-                          <h2>Cargo</h2>
-                          <span>{user.job}</span>
+                          <h2>Turno</h2>
+                          <span>{user.shift}</span>
                         </div>
                       )}
-                      <div className="dropdown-detail-item">
-                        <h2>Data de admissão</h2>
-                        <span>
-                          {new Date(user.admission_date).toLocaleDateString()}
-                        </span>
-                      </div>
-                      <div className="dropdown-detail-item">
-                        <h2>Telefone</h2>
-                        <span>{formatPhone(user.phone)}</span>
-                      </div>
+                      {enderecoScreen && (
+                        <div className="dropdown-detail-item">
+                          <h2>Endereço</h2>
+                          <span>{user.address}</span>
+                        </div>
+                      )}
                     </div>
                   </td>
                 </tr>

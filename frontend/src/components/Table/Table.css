@@ -2,7 +2,7 @@
 
 .table-container {
     width: 100%;
-    max-width: 1300px;
+    max-width: 1800px;
     margin: 0 auto;
     border-spacing: 0;
     border: 1px solid #DFDFDF;
@@ -26,14 +26,14 @@ th {
     font-weight: 500;
     font-size: 16px;
     line-height: 19.54px;
-    padding: 10px;
+    padding: 15px 20px;
     color: white;
     text-align: left;
 }
 
 td {
     background-color: rgb(255, 255, 255);
-    padding: 10px;
+    padding: 15px 20px;
     text-align: left;
     font-weight: 400;
     font-size: 16px;
@@ -72,12 +72,8 @@ th:last-child {
     background-color: white;
 }
 
-.dropdown-content {
-    padding: 0px 10px;
-}
 
 .dropdown-detail {
-    padding: 11.5px 0px 31px 0px;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -114,10 +110,29 @@ th:last-child {
 }
 
 
-@media (max-width: 1250px) {
+@media (max-width: 1880px) {
+
+    .table-container th:nth-child(12),
+    .table-container td:nth-child(12) {
+        display: none;
+    }
+
+    .action-column {
+        display: table-cell;
+    }
+
     .container {
         margin: 0px 32px;
     }
+}
+
+@media (max-width: 1800px) {
+
+    .table-container th:nth-child(11),
+    .table-container td:nth-child(11) {
+        display: none;
+    }
+
 }
 
 

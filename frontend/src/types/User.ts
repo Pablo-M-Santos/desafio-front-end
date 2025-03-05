@@ -6,7 +6,7 @@ export type Employee = {
   department: string; // departamento
   level: string; // nível
   status: string; // status  
-  salary_range: string; // faixa salarial
+  salary: string; // faixa salarial
   admission_date: string; // data de admissão
   email: string; // email
   phone: string;  // telefone
