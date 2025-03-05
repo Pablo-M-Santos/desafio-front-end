@@ -16,6 +16,27 @@ const Table: React.FC = () => {
   const [enderecoScreen, setenderecoScreen] = useState<boolean>(
     window.innerWidth <= 1800
   );
+  const [emailScreen, setemailScreen] = useState<boolean>(
+    window.innerWidth <= 1700
+  );
+  const [dataScreen, setdataScreen] = useState<boolean>(
+    window.innerWidth <= 1400
+  );
+  const [telefoneScreen, settelefoneScreen] = useState<boolean>(
+    window.innerWidth <= 1200
+  );
+  const [salarioScreen, setsalarioScreen] = useState<boolean>(
+    window.innerWidth <= 1000
+  );
+  const [statusScreen, setstatusScreen] = useState<boolean>(
+    window.innerWidth <= 800
+  );
+  const [nivelScreen, setnivelScreen] = useState<boolean>(
+    window.innerWidth <= 700
+  );
+  const [departamentoScreen, setdepartamentoScreen] = useState<boolean>(
+    window.innerWidth <= 600
+  );
 
   useEffect(() => {
     fetchUsers().then((data) => {
@@ -26,6 +47,13 @@ const Table: React.FC = () => {
     const handleResize = () => {
       setturnoScreen(window.innerWidth <= 1880);
       setenderecoScreen(window.innerWidth <= 1800);
+      setemailScreen(window.innerWidth <= 1700);
+      setdataScreen(window.innerWidth <= 1400);
+      settelefoneScreen(window.innerWidth <= 1200);
+      setsalarioScreen(window.innerWidth <= 1000);
+      setstatusScreen(window.innerWidth <= 800);
+      setnivelScreen(window.innerWidth <= 700);
+      setdepartamentoScreen(window.innerWidth <= 600);
 
       if (window.innerWidth > 1880) {
         setDropdownState(null);
@@ -100,16 +128,60 @@ const Table: React.FC = () => {
                 <tr className="dropdown-row">
                   <td colSpan={12} className="dropdown-content">
                     <div className="dropdown-detail">
-                      {turnoScreen && (
+                      {departamentoScreen && (
                         <div className="dropdown-detail-item">
-                          <h2>Turno</h2>
-                          <span>{user.shift}</span>
+                          <h2>Departamento</h2>
+                          <span>{user.department}</span>
+                        </div>
+                      )}
+                      {nivelScreen && (
+                        <div className="dropdown-detail-item">
+                          <h2>Nível</h2>
+                          <span>{user.level}</span>
+                        </div>
+                      )}
+                      {statusScreen && (
+                        <div className="dropdown-detail-item">
+                          <h2>Status</h2>
+                          <span>{user.status}</span>
+                        </div>
+                      )}
+                      {salarioScreen && (
+                        <div className="dropdown-detail-item">
+                          <h2>Salário</h2>
+                          <span>{user.salary}</span>
+                        </div>
+                      )}
+                      {telefoneScreen && (
+                        <div className="dropdown-detail-item">
+                          <h2>Telefone</h2>
+                          <span>{user.phone}</span>
+                        </div>
+                      )}
+                      {dataScreen && (
+                        <div className="dropdown-detail-item">
+                          <h2>Data de Admissão</h2>
+                          <span>
+                            {new Date(user.admission_date).toLocaleDateString()}
+                          </span>
+                        </div>
+                      )}
+                      {emailScreen && (
+                        <div className="dropdown-detail-item">
+                          <h2>Email</h2>
+                          <span>{user.email}</span>
                         </div>
                       )}
                       {enderecoScreen && (
                         <div className="dropdown-detail-item">
                           <h2>Endereço</h2>
                           <span>{user.address}</span>
+                        </div>
+                      )}
+                      {turnoScreen && (
+                        <div className="dropdown-detail-item">
+                          <h2>Turno</h2>
+                          <span>{user.shift}</span>
                         </div>
                       )}
                     </div>
